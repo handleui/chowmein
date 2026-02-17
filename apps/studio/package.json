@@ -1,34 +1,41 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
+  "name": "studio",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3000",
+    "dev": "portless studio.chowmein next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --max-warnings 0",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "*",
-    "next": "16.1.5",
-    "react": "^19.2.0",
-    "react-dom": "^19.1.0"
+    "@types/mdx": "^2.0.13",
+    "fumadocs-core": "^16.6.2",
+    "fumadocs-mdx": "^14.2.7",
+    "fumadocs-ui": "^16.6.2",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15.4.6",
-    "@repo/eslint-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@tailwindcss/postcss": "^4.1.5",
     "@types/node": "^22.15.30",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.1",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.39.1",
+    "babel-plugin-react-compiler": "1.0.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.5",
     "typescript": "5.9.2"
-  }
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
 }
